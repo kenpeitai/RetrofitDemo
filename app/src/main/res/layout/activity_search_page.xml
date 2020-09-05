@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--    <SearchView-->
+    <!--android:imeOptions="actionSend"-->
+    <!--        android:background="@color/greenPrimary"-->
+    <!--        android:id="@+id/search_edit_frame"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="56dp" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar_search_page"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/greenPrimary"
+        android:gravity="left">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/greenPrimary">
+
+            <SearchView
+                android:id="@+id/search_edit_search_page"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:background="#ffffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left"
+                android:iconifiedByDefault="true"
+                android:imeOptions="actionSend"
+                android:queryBackground="@null"
+                android:queryHint="@string/search_hint"
+                android:searchHintIcon="@null"
+                android:searchIcon="@mipmap/no_ico"
+                android:showDividers="none"
+                android:submitBackground="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:background="@mipmap/search"
+                android:foregroundGravity="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/action_bar_search_page"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+
+
+</RelativeLayout>
